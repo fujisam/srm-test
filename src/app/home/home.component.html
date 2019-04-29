@@ -1,0 +1,72 @@
+<div id="main-content-wrapper">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Página Inicial</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Painel de Gestão</li>
+    </ol>
+  </nav>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <h1>Painel de Gestão</h1>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Produtos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Todos
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Produto 1</a>
+            <a class="dropdown-item" href="#">Produto 2</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Produto 3</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="main-content col-sm-9 col-md-9 col-lg-9 col-xl-9">
+        <h4>Atalhos</h4>
+        <dl class="main-content-left">
+          <dt>Operacional</dt>
+          <dd>
+            <button type="button" class="btn btn-light btn-sm">Envio</button>
+          </dd>
+          <dd>
+            <button type="button" class="btn btn-light btn-sm">Assinatura</button>
+          </dd>
+          <dd>
+            <button type="button" class="btn btn-light btn-sm">Envio de Duplicatas</button>
+          </dd>
+          <dd>
+            <button type="button" class="btn btn-light btn-sm">Assinatura Digital</button>
+          </dd>
+          <dd>
+            <button type="button" class="btn btn-light btn-sm">Nova operação</button>
+          </dd>
+        </dl>
+        <dl class="main-content-right">
+          <dt>Geral</dt>
+          <dd>
+            <button type="button" class="btn btn-light btn-sm">Carteira</button>
+          </dd>
+          <dd>
+            <button type="button" class="btn btn-light btn-sm">Instruções</button>
+          </dd>
+        </dl>
+      </div>
+      <div class="side-content col-sm-3 col-md-3 col-lg-3 col-xl-3">
+        <h4>Alertas <span>Últimos 5 dias</span></h4>
+        <ul>
+          <li *ngFor="let item of alertData">{{item.quantidade}} {{item.decricaoalerta}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+

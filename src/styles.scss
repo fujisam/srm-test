@@ -1,0 +1,208 @@
+/* You can add global styles to this file, and also import other style files */
+$border: 3px solid red !important;
+
+.border {
+    border: 3px solid red !important;
+}
+
+$white: #fff;
+$red:#f20d0d;
+
+$primary-color: #121f3f;
+$second-color: #4997d1;
+
+/* ---------- ---------- ---------- ---------- ----------    */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+i.fas,
+i.far {
+    padding: 0 5px;
+}
+
+.no-border {
+    border: 0;
+}
+
+#sidebar-wrapper {
+    background-color: $primary-color;
+    border-right: 1px solid $primary-color !important;
+
+    .sidebar-heading {
+        font-size: 14px;
+        background-color: $white;
+        line-height: 42px;
+    }
+
+    div {
+        a {
+            background-color: $primary-color;
+            color: $white;
+            font-size: 15px;
+            border: 1px solid #49657a;
+            border-left: 0;
+            border-right: 0;
+
+            button {
+                padding: 0;
+            }
+        }
+    }
+
+    .submenu {
+        a {
+            padding: 5px 0 5px 40px !important;
+            font-size: 13px !important;
+            background-color: $primary-color;
+            color: $white;
+            font-size: 15px;
+            border: 1px solid #49657a;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+        }
+    }
+}
+
+#top-navbar {
+    height: 73px;
+    ;
+    padding: 0 5px;
+
+    #menu-toggle {
+        padding: 0;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .navbar-nav {
+        align-items: center;
+
+        label.label-center {
+            display: flex;
+            align-items: center;
+            line-height: 37px;
+            margin-right: 10px;
+        }
+
+        .custom-select {
+            height: 44PX;
+        }
+
+        .user-icon,
+        .user-options-list {
+            background-color: $primary-color;
+            color: $white;
+        }
+
+        .user-icon {
+            margin: 0 0 0 20px;
+            padding: 8px;
+        }
+
+        .user-alert {
+            position: relative;
+            padding: 10px 10px 3px 8px;
+            background-color: $second-color;
+            color: $white;
+
+            i.fa-bell {
+                font-size: 23px;
+            }
+
+            i.fa-circle {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 20px;
+                color: $red;
+            }
+
+            span {
+                position: absolute;
+                color: $white;
+                top: 6px;
+                right: 16px;
+                font-size: 11px !important;
+            }
+        }
+
+        .user-options-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            a {
+                color: inherit;
+            }
+
+            .dropdown-menu {
+                background-color: $primary-color;
+                color: inherit;
+            }
+        }
+    }
+}
+
+#main-content-wrapper {
+    background-color: #e9ecef;
+
+    .breadcrumb {
+        margin: 0 0 0 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
+
+.main-content,
+.side-content {
+    padding: 35px 32px;
+    background-color: #fff;
+
+    h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+}
+
+.main-content {
+
+    dl {
+        float: left;
+
+        dd {
+            display: inline-block;
+
+            button {
+                border: 1px solid $second-color;
+                width: 200px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .main-content-left {
+        width: 55%;
+    }
+
+    .main-content-right {
+        width: 45%;
+    }
+}
+
+.side-content {
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+}
+
+

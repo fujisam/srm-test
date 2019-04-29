@@ -1,0 +1,30 @@
+<!-- sidebar-wrapper -->
+<div id="sidebar-wrapper" class="border-right">
+  <div class="sidebar-heading">
+    <input id="search" type="text" class="no-border text-right" placeholder="Pequise Aqui"> <i
+      class="fas fa-search"></i>
+  </div>
+  <div class="menu-links list-group list-group-flush">
+    <ng-container *ngFor="let item of menuData; let i = index">
+      <ng-container *ngIf="item.submenu else menu">
+        <a routerLink="#submenu1" class="nav-link collapsed" data-toggle="collapse" data-target="#submenu1">
+          <i class="far fa-chart-bar"></i> {{item.label}}
+          <button class="btn btn-link" onclick="javascript: location.href='#submenu1';" data-toggle="collapse"
+            data-target="#submenu1">
+            <i class="fas fa-angle-double-right"></i>
+          </button>
+        </a>
+        <div class="collapse submenu" id="submenu1" aria-expanded="false">
+          <a *ngFor="let itemSubmenu of item.submenu" class="nav-link py-0" routerLink="{{itemSubmenu.url}}">
+            {{itemSubmenu.label}}
+          </a>
+        </div>
+      </ng-container>
+      <ng-template #menu>
+        <a routerLink="{{item.url}}" class="list-group-item list-group-item-action">
+          <i class="{{item.icon}}"></i> {{item.label}}
+        </a>
+      </ng-template>
+    </ng-container>
+  </div>
+</div>
